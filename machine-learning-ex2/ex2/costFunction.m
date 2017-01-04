@@ -20,16 +20,11 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
-
-% The original foruma says sigmoid(theta ' * x). 
-% I am not entirely sure why this is working
-% I know probably the rule being applied is theta ' * X = X' * theta
-% but we do not have X' rather we are using simple X. 
 % X = 20 X 3
 % theta = 3 X 1
 % cost = 20 X 1
 cost = sigmoid(X * theta);
-% again we need to use y' to match dimenstions
+% we need to use y' to match dimenstions
 % y = 20 X 1
 J = (1/m) * sum((-y' * log(cost)) - ((1 -  y)' * log(1 - cost)));
 x_tranpose_times_cost_minus_y = X' * (cost - y);
