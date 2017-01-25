@@ -79,6 +79,11 @@ a2 = sigmoid(z2);
 a2 = [ones(size(a2)(1), 1) a2];
 h_of_x = sigmoid(a2 * Theta2');
 
+% h_of_x is a matrix, contains one row against each input row
+% and number_of_columns in matrix = number_of_classes or possible labels
+% each cell of one row contains proability of row belonging to a class 
+% and max(cell_value in a row) = X belonging to that class
+
 % >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 % convert y into matrix
 % <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
